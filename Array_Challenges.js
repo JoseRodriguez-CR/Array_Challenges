@@ -95,5 +95,25 @@ console.log(result); // we expect back ["e", "d", "c", "b", "a"]
 console.log("--------End of challenges #4-------");
 
 
+// 5. Fibonacci Array
+
+function fibonacciArray(n) {
+    // the [0, 1] are the starting values of the array to calculate the rest from
+    var fibArr = [0, 1];
+    let sum = 0;
+    for( i = 1; i< n-1; i ++){
+        sum = fibArr[fibArr.length-2]+fibArr[fibArr.length-1];
+        fibArr.push(sum);
+        //console.log(fibArr)
+    }
+    // your code here
+    return fibArr;
+}
+    
+var result = fibonacciArray(10);
+console.log(result); // we expect back [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+console.log("--------End of challenges #5-------");
+
 
 
