@@ -70,9 +70,28 @@ function betterThanAverage(arr) {
 var result = betterThanAverage([6, 8, 3, 10, -2, 5, 9]);
 console.log(result); // we expect back 4
 
-
-
 console.log("--------End of challenges #3-------");
+
+// 4. Array Reverse
+
+function reverse(arr) {
+    let store = "";
+    for( i = arr.length; i > 0; i --){
+        store = arr[arr.length-1];
+        console.log(store);
+        //
+        console.log(arr);
+        arr.unshift(store);
+        arr.pop();
+    }
+        console.log(arr);
+        return arr;
+}
+//console.log(["a", "b", "c", "d", "e"]);
+var result = reverse(["a", "b", "c", "d", "e"]);
+console.log(result); // we expect back ["e", "d", "c", "b", "a"]
+
+console.log("--------End of challenges #4-------");
 
 
 
