@@ -42,11 +42,37 @@ function highPass(arr, cutoff) {
 var result = highPass([6, 8, 3, 10, -2, 5, 9], 5);
 console.log(result); // we expect back [6, 8, 10, 9]
 
-// 3. High Pass Filter
+console.log("--------End of challenges #2-------");
+
+// 3. Better than the average
+
+function betterThanAverage(arr) {
+    var sum = 0;
+    var average = 0;
+    for ( i = 0; i <= arr.length -1; i ++){
+        sum = sum + (arr[i]);
+        //console.log(arr[i]);
+        //console.log(sum);
+    }
+    // calculate the average
+    average = sum/(arr.length);
+    //console.log(average);
+    let numbsLarger = highPass(arr, average);
+    //console.log(numbsLarger);
+    var count = 0
+    for ( i = 0; i <= numbsLarger.length -1; i ++){        
+        count = count + 1; 
+        //console.log(count);
+    }        
+    // count how many values are greated than the average
+    return count;
+}
+var result = betterThanAverage([6, 8, 3, 10, -2, 5, 9]);
+console.log(result); // we expect back 4
 
 
 
-
+console.log("--------End of challenges #3-------");
 
 
 
