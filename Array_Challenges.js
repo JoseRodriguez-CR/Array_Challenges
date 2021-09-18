@@ -75,17 +75,18 @@ console.log("--------End of challenges #3-------");
 // 4. Array Reverse
 
 function reverse(arr) {
-    let store = "";
-    for( i = arr.length; i > 0; i --){
-        store = arr[arr.length-1];
-        console.log(store);
-        //
-        console.log(arr);
-        arr.unshift(store);
+    let store = [];
+    for( i = arr.length-1; i >= 0; i --){
+        store.push(arr[i]);
+        //console.log(arr[i]);
+        //console.log(store);
+        //console.log(arr);
+        //arr.unshift(store);
         arr.pop();
     }
-        console.log(arr);
-        return arr;
+        //console.log(arr);
+        //console.log(store);
+        return store;
 }
 //console.log(["a", "b", "c", "d", "e"]);
 var result = reverse(["a", "b", "c", "d", "e"]);
